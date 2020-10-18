@@ -3,7 +3,7 @@ const ITEM_DATABASE = "https://secure.runescape.com/m=itemdb_oldschool/api/catal
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    noLoop();
+    //noLoop();
     //https://cors-anywhere.herokuapp.com/
     loadJSON(CORS + ITEM_DATABASE + 50, logData);
 }

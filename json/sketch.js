@@ -5,7 +5,7 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     //noLoop();
     //https://cors-anywhere.herokuapp.com/
-    loadJSON(CORS + ITEM_DATABASE + 50, logData);
+    loadJSON(ITEM_DATABASE + 50, logData);
 }
 
 let icon;
@@ -13,7 +13,7 @@ let iconLoaded = false;
 
 function logData(data) {
     console.log(data);
-    let imgURL = CORS + data.item.icon_large;
+    let imgURL = data.item.icon_large;
     icon = loadImage(imgURL, loaded);
     console.log(imgURL);
 }
@@ -24,6 +24,6 @@ function loaded() {
 
 function draw() {
     if (iconLoaded) {
-        image(icon, 0, 0, 100, 100);
+        image(icon, 0, 0);
     }
 }

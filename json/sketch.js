@@ -13,8 +13,8 @@ let iconLoaded = false;
 
 function logData(data) {
     console.log(data);
-    let imgURL = data.item.icon_large;
-    icon = loadImage(CORS + imgURL, loaded);
+    let imgURL = CORS + data.item.icon_large;
+    icon = loadImage(imgURL, loaded);
     console.log(imgURL);
 }
 
